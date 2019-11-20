@@ -74,9 +74,9 @@ private:
 //                              DiagramItem::DiagramType type);
 
 //    QToolButton* creatFileWindowButton(const QString&text, const QString&image,int buttonId);
-     QListWidgetItem*  creatFileWindowButton
-     (const QString&text, const QString&image,int &buttonId);
-    void creatFileWindow();
+     QListWidgetItem*  creatFileWindowButton(const QString&text, const QString&image,int &buttonId);
+
+     void creatFileWindow();
 
      // MdiChild* activeMdiChild();
 
@@ -94,7 +94,7 @@ private:
 //    QAction *previousAct;
 //    QAction *windowMenuSeparatorAct;
 
-    QWidget* CamMechanismTypeWidget;
+    QWidget* CamMechanismTypeWidget;//凸轮机构类型窗口
 
    //********DATA***************
 

@@ -49,10 +49,10 @@ private:
 //    QColor myItemColor;
 
     DiagramItem::ActionType myActionType;
-    CamItem::ActType myTLActType;
-    CamItem::TLShapeType myTLShapeType;
-    CDJItem::ActType myCDJActType;
-    CDJItem::CDJShapeType myCDJShapeType;
+    int myTLActType;
+    PlaneCamItem::TLShapeType myTLShapeType;
+    int myCDJActType;
+    PlaneCDJItem::CDJShapeType myCDJShapeType;
 
     DiagramItem* myDiagramItem;
 

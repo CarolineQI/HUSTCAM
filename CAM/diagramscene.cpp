@@ -11,10 +11,10 @@ DiagramScene::DiagramScene(QMenu *itemMenu, QObject *parent)
    // myItemType = DiagramItem::;
 //    myItemColor = Qt::black;
     myActionType=DiagramItem::ActionType::Active;
-    myTLActType=CamItem::ActType::Rotate;
-    myTLShapeType=CamItem::TLShapeType::PlaneCam;
-    myCDJActType=CDJItem::ActType::MoveVertical;
-    myCDJShapeType=CDJItem::CDJShapeType::Roller;
+    myTLActType=ActType::Rotate;
+    myTLShapeType=PlaneCamItem::TLShapeType::PlaneCam;
+    myCDJActType=ActType::MoveVertical;
+    myCDJShapeType=PlaneCDJItem::CDJShapeType::Roller;
     myDiagramItem=new DiagramItem(myActionType,
                                   myTLActType,
                                   myTLShapeType,

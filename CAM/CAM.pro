@@ -25,18 +25,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
     cmtwidget.cpp \
+    jlitem.cpp \
         mainwindow.cpp \
     diagramscene.cpp \
     diagramitem.cpp \
     mdichildwindow.cpp \
-    datadeal.cpp
+    datadeal.cpp \
+    planecamitem.cpp \
+    planecdjitem.cpp \
+    planeitem.cpp \
+    planemainitem.cpp
 
 HEADERS  += mainwindow.h \
     cmtwidget.h \
     diagramscene.h \
     diagramitem.h \
+    jlitem.h \
     mdichildwindow.h \
-    datadeal.h
+    datadeal.h \
+    planecamitem.h \
+    planecdjitem.h \
+    planeitem.h
 
 FORMS    += mainwindow.ui \
     cmtwidget.ui
