@@ -1,0 +1,11 @@
+release/main.o
+release/cmtwidget.o
+release/mainwindow.o
+release/diagramscene.o
+release/diagramitem.o
+release/mdichildwindow.o
+release/datadeal.o
+release/qrc_resource.o
+release/moc_mainwindow.o
+release/moc_cmtwidget.o
+release/moc_diagramscene.o

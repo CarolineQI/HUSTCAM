@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
+    cmtwidget.cpp \
         mainwindow.cpp \
     diagramscene.cpp \
     diagramitem.cpp \
@@ -31,12 +32,14 @@ SOURCES += main.cpp\
     datadeal.cpp
 
 HEADERS  += mainwindow.h \
+    cmtwidget.h \
     diagramscene.h \
     diagramitem.h \
     mdichildwindow.h \
     datadeal.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    cmtwidget.ui
 
 RESOURCES += \
     resource.qrc

@@ -1,0 +1,11 @@
+debug/main.o
+debug/cmtwidget.o
+debug/mainwindow.o
+debug/diagramscene.o
+debug/diagramitem.o
+debug/mdichildwindow.o
+debug/datadeal.o
+debug/qrc_resource.o
+debug/moc_mainwindow.o
+debug/moc_cmtwidget.o
+debug/moc_diagramscene.o

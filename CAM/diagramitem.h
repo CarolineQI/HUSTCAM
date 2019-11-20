@@ -42,8 +42,8 @@ struct PlaneCAMData
 {
     //normal planeCAM
     //********DATA**************
-    enum upRule{uUniform,uAccelerate,uSinAcc,uCosAcc};
-    enum downRule{dUniform,dAccelerate,dSinAcc,dCosAcc};
+    enum upRule{uUniform,uAccelerate,uSinAcc,uCosAcc};//升程规律
+    enum downRule{dUniform,dAccelerate,dSinAcc,dCosAcc};//回程规律
     double m_fBR;//base circle r
     double m_H;//xing cheng
     int m_nTCAng;//tui cheng ang

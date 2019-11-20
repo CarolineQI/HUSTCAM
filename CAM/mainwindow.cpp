@@ -9,46 +9,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("HUST CAD");
-    setWindowIcon(QIcon(":/cam/resource/HUST.png"));
+//    setWindowTitle("HUST CAD");
+//    setWindowIcon(QIcon(":/cam/resource/HUST.png"));
     creatFileWindow();
     //menuWidget
 
-    ui->buildButton->setIcon(QIcon(":/cam/resource/start(gray)/build.png"));
-    ui->openButton->setIcon(QIcon(":/cam/resource/start(gray)/open.png"));
-    ui->saveButton->setIcon(QIcon(":/cam/resource/start(gray)/save.png"));
-    ui->saveAsButton->setIcon(QIcon(":/cam/resource/start(gray)/saveasMain.png"));
-    ui->beginwidget-> setStyleSheet("QPushButton:hover{background-color: rgb(180, 180, 180);border:rgb(180, 180, 180);}"
-                                    "QPushButton:checked{background-color: rgb(180, 180, 180);border:rgb(180, 180, 180);}");
-    ui->tabWidget->setStyleSheet("QTabBar::tab {"
-                                 "border-color: black; "
-                                 "border-width: 3px; "
-                                 "border-bottom:none; "
-                                 "border-top-left-radius: 6px; "
-                                 "border-top-right-radius: 6px; "
-                                 "background-color: rgb(244, 245, 242); "
-                                 "color:black; "
-                                 "min-width:30ex;"
-                                 "min-height:10ex;}"
-                                "QTabBar::tab:!selected{ "
-                                "background:none;"
-                                "color:black; "
-                                "border:none; }"
-                                "QTabBar::tab:selected{"
-                                "background: rgb(244, 245, 242);} "
-                                " QTabWidget::pane { "
-                                " border:rgb(244, 245, 242)"
-                                 "background-color: rgb(244, 245, 242);}"
-                                 "QTabWidget::tab-bar { background:none;}" );
-
-    ui->CamMechanismType->setIcon(QIcon(":/cam/resource/design/CamMechanismType.png"));
-    ui->FollowerMotionLaw->setIcon(QIcon(":/cam/resource/design/FollowerMotionLaw.png"));
-    ui->GeometricParameters->setIcon(QIcon(":/cam/resource/design/GeometricParameters.png"));
-    ui->designwidget-> setStyleSheet("QPushButton:hover{background-color: rgb(180, 180, 180);border:rgb(180, 180, 180);}"
-                                    "QPushButton:checked{background-color: rgb(180, 180, 180);border:rgb(180, 180, 180);}");
-
-     ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(1);
+    ui->menuTabWidget->setCurrentWidget(ui->Begin);
     connect(ui->buildButton,&QPushButton::clicked,this,&MainWindow::newFile);
+    CamMechanismTypeWidget=new CMTWidget;
 
 
 }
@@ -78,19 +47,10 @@ void MainWindow::newFile()
 void MainWindow::returnButtonPressed()
 {
     ui->stackedWidget->setCurrentIndex(1);
-    ui->fileStackedWidget->setCurrentWidget(0);
+    ui->fileStackedWidget->setCurrentIndex(0);
     setCurrentIndex();
 }
 
-void MainWindow::on_tabWidget_tabBarClicked(int index)
-{
-    lastTadIndex=ui->tabWidget->currentIndex();
-    if(index==0)
-    {
-        ui->fileStackedWidget->setCurrentWidget(ui->beginFilePage);
-        ui->stackedWidget->setCurrentWidget(ui->filePage);
-    }
-}
 
 MdiChildWindow* MainWindow::createMdiChild()
 {
@@ -116,24 +76,16 @@ void MainWindow::creatFileWindow()
 {
 
     //![0] main
-     ui->returnPushButton->setStyleSheet("QPushButton{background-color:rgb(230, 230,230);}");
-     ui->returnPushButton->setIconSize(QSize(100,100));
-     ui->returnPushButton->setIcon(QIcon(":/cam/resource/start(gray)/return.png"));
-     ui->returnPushButton->setCheckable(true);
-     ui->returnPushButton->setToolTip("Return To MainWindow");
-      creatFileWindowButton(tr("Quick Operating"),
-                            ":/cam/resource/start(gray)/start.png",
-                            beginButton);
-      creatFileWindowButton(tr("Build New File"),
-                            ":/cam/resource/start(gray)/newfile.png",
-                            newFileButton);
-      creatFileWindowButton(tr("Open File"),
-                            ":/cam/resource/start(gray)/openfile.png",
-                            openFileButton);
-      connect(ui->returnPushButton,SIGNAL(pressed()),
-              this,SLOT(returnButtonPressed()));
-      connect(ui->fileButtonListWidget,SIGNAL(currentRowChanged(int)),
-            this,SLOT(fileStackWidgetChange(int)));
+//     ui->returnPushButton->setStyleSheet("QPushButton{background-color:rgb(230, 230,230);}");
+//     ui->returnPushButton->setIconSize(QSize(100,100));
+//     ui->returnPushButton->setIcon(QIcon(":/cam/resource/start(gray)/return.png"));
+//     ui->returnPushButton->setCheckable(true);
+//     ui->returnPushButton->setToolTip("Return To MainWindow");
+      creatFileWindowButton(tr("Quick Operating"),":/cam/resource/file/start.png",beginButton);
+      creatFileWindowButton(tr("Build New File"),":/cam/resource/file/newfile.png", newFileButton);
+      creatFileWindowButton(tr("Open File"),":/cam/resource/file/openfile.png",openFileButton);
+      connect(ui->returnPushButton,SIGNAL(pressed()),this,SLOT(returnButtonPressed()));
+      connect(ui->fileButtonListWidget,SIGNAL(currentRowChanged(int)),this,SLOT(fileStackWidgetChange(int)));
       ui->fileButtonListWidget->setIconSize(fileButtonSize);
       ui->fileButtonListWidget->setStyleSheet(
                   "QListWidget::Item:hover{background:lightgray; }"
@@ -153,5 +105,21 @@ void MainWindow::createMenus()
 
 void MainWindow::setCurrentIndex()
 {
-    ui->tabWidget->setCurrentIndex(lastTadIndex);
+    ui->menuTabWidget->setCurrentIndex(lastTadIndex);
+}
+
+
+void MainWindow::on_CamMechanismType_clicked()
+{
+    CamMechanismTypeWidget->show();
+}
+
+void MainWindow::on_menuTabWidget_tabBarClicked(int index)
+{
+    lastTadIndex=ui->menuTabWidget->currentIndex();
+    if(index==0)
+    {
+        ui->fileStackedWidget->setCurrentWidget(ui->beginFilePage);
+        ui->stackedWidget->setCurrentWidget(ui->filePage);
+    }
 }

@@ -6,19 +6,35 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1041</width>
-    <height>687</height>
+    <width>956</width>
+    <height>704</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>HUSTCAM 凸轮设计系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/cam/resource/HUST.png</normaloff>:/cam/resource/HUST.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">
 background-color: rgb(244, 245, 242);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_8">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -41,7 +57,8 @@ background-color: rgb(244, 245, 242);</string>
       </property>
       <widget class="QWidget" name="filePage">
        <property name="styleSheet">
-        <string notr="true">font: 75 15pt &quot;微软雅黑&quot;;</string>
+        <string notr="true">font: 75 15pt &quot;微软雅黑&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_9">
         <property name="leftMargin">
@@ -81,38 +98,6 @@ background-color: rgb(244, 245, 242);</string>
             <number>0</number>
            </property>
            <item row="2" column="0">
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>414</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="returnPushButton">
-             <property name="mouseTracking">
-              <bool>false</bool>
-             </property>
-             <property name="autoFillBackground">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(230, 230,230);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
             <widget class="QListWidget" name="fileButtonListWidget">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
@@ -152,13 +137,79 @@ background-color: rgb(244, 245, 242);</string>
              </property>
             </widget>
            </item>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>414</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="returnPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>120</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>120</height>
+              </size>
+             </property>
+             <property name="mouseTracking">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>返回主界面</string>
+             </property>
+             <property name="whatsThis">
+              <string>Return To MainWindow</string>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(230, 230,230);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/cam/resource/HUST.png</normaloff>:/cam/resource/HUST.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>150</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
         <item row="0" column="1">
          <widget class="QStackedWidget" name="fileStackedWidget">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(230, 230,230);
+           <string notr="true">background-color: rgb(255, 255, 255);
 </string>
           </property>
           <widget class="QWidget" name="beginFilePage">
@@ -263,6 +314,13 @@ background-color: rgb(244, 245, 242);</string>
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QListWidget" name="filelistWidget">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </item>
              </layout>
@@ -286,13 +344,6 @@ background-color: rgb(244, 245, 242);</string>
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QListWidget" name="filelistWidget">
-                <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
            </layout>
@@ -304,7 +355,10 @@ background-color: rgb(244, 245, 242);</string>
        </layout>
       </widget>
       <widget class="QWidget" name="mainpage">
-       <layout class="QGridLayout" name="gridLayout">
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <property name="leftMargin">
          <number>0</number>
         </property>
@@ -317,10 +371,7 @@ background-color: rgb(244, 245, 242);</string>
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
+        <item>
          <widget class="QWidget" name="menuwidget" native="true">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -344,9 +395,9 @@ background-color: rgb(244, 245, 242);</string>
            <string notr="true">
 background-color: rgb(217, 221, 215);</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="0" column="0">
-            <widget class="QTabWidget" name="tabWidget">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QTabWidget" name="menuTabWidget">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -366,10 +417,34 @@ background-color: rgb(217, 221, 215);</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QTabBar::tab {
+border-color: black;
+border-width: 3px;
+border-bottom:none;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px; 
+background-color: rgb(244, 245, 242); 
+color:black;
+min-width:30ex;
+min-height:10ex;}
+
+QTabBar::tab:!selected{ 
+background:none;
+color:black;
+border:none; }
+
+QTabBar::tab:selected{
+background: rgb(244, 245, 242);}
+
+QTabWidget::pane { 
+border:rgb(244, 245, 242);
+background-color: rgb(244, 245, 242);}
+
+QTabWidget::tab-bar { 
+background:none;}</string>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="iconSize">
               <size>
@@ -421,6 +496,14 @@ background-color: rgb(217, 221, 215);</string>
                </property>
                <item row="0" column="0">
                 <widget class="QWidget" name="beginwidget" native="true">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton:hover{
+background-color: rgb(180, 180, 180);
+border:rgb(180, 180, 180);}
+QPushButton:checked{
+background-color: rgb(180, 180, 180);
+border:rgb(180, 180, 180);}</string>
+                 </property>
                  <layout class="QGridLayout" name="gridLayout_6">
                   <item row="0" column="0">
                    <spacer name="verticalSpacer_4">
@@ -451,8 +534,18 @@ background-color: rgb(217, 221, 215);</string>
                         <height>100</height>
                        </size>
                       </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::RightToLeft</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/start/build.png</normaloff>:/cam/resource/start/build.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -491,6 +584,10 @@ background-color: rgb(217, 221, 215);</string>
                       <property name="text">
                        <string/>
                       </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/start/open.png</normaloff>:/cam/resource/start/open.png</iconset>
+                      </property>
                       <property name="iconSize">
                        <size>
                         <width>70</width>
@@ -525,6 +622,10 @@ background-color: rgb(217, 221, 215);</string>
                       <property name="text">
                        <string/>
                       </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/start/save.png</normaloff>:/cam/resource/start/save.png</iconset>
+                      </property>
                       <property name="iconSize">
                        <size>
                         <width>70</width>
@@ -558,6 +659,10 @@ background-color: rgb(217, 221, 215);</string>
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/start/saveAs.png</normaloff>:/cam/resource/start/saveAs.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -626,27 +731,50 @@ background-color: rgb(217, 221, 215);</string>
               <attribute name="title">
                <string>设计</string>
               </attribute>
-              <layout class="QGridLayout" name="gridLayout_12">
-               <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
                 <widget class="QWidget" name="designwidget" native="true">
-                 <layout class="QGridLayout" name="gridLayout_13">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton:hover{
+background-color: rgb(180, 180, 180);
+border:rgb(180, 180, 180);}
+QPushButton:checked{
+background-color: rgb(180, 180, 180);
+border:rgb(180, 180, 180);}</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
                   <property name="leftMargin">
-                   <number>0</number>
+                   <number>6</number>
                   </property>
                   <property name="topMargin">
-                   <number>0</number>
+                   <number>6</number>
                   </property>
                   <property name="rightMargin">
-                   <number>0</number>
+                   <number>6</number>
                   </property>
                   <property name="bottomMargin">
-                   <number>0</number>
+                   <number>6</number>
                   </property>
                   <property name="spacing">
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
                     <property name="spacing">
                      <number>0</number>
                     </property>
@@ -669,6 +797,10 @@ background-color: rgb(217, 221, 215);</string>
                       </property>
                       <property name="text">
                        <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/design/CamMechanismType.png</normaloff>:/cam/resource/design/CamMechanismType.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -720,6 +852,10 @@ background-color: rgb(217, 221, 215);</string>
                       <property name="text">
                        <string/>
                       </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/design/FollowerMotionLaw.png</normaloff>:/cam/resource/design/FollowerMotionLaw.png</iconset>
+                      </property>
                       <property name="iconSize">
                        <size>
                         <width>80</width>
@@ -764,6 +900,10 @@ background-color: rgb(217, 221, 215);</string>
                       <property name="text">
                        <string/>
                       </property>
+                      <property name="icon">
+                       <iconset resource="resource.qrc">
+                        <normaloff>:/cam/resource/design/GeometricParameters.png</normaloff>:/cam/resource/design/GeometricParameters.png</iconset>
+                      </property>
                       <property name="iconSize">
                        <size>
                         <width>80</width>
@@ -785,7 +925,7 @@ background-color: rgb(217, 221, 215);</string>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
-                        <width>18</width>
+                        <width>703</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -841,7 +981,7 @@ background-color: rgb(217, 221, 215);</string>
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item>
          <widget class="QWidget" name="mainWidget" native="true">
           <layout class="QGridLayout" name="gridLayout_10">
            <item row="0" column="0">
@@ -1825,6 +1965,8 @@ background-color: rgb(230, 230, 230);</string>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -22,7 +22,7 @@
 #include"diagramscene.h"
 #include"diagramitem.h"
 #include"mdichildwindow.h"
-
+#include"cmtwidget.h"
 
 
 
@@ -45,11 +45,13 @@ private slots:
     void fileStackWidgetChange(int);
     void newFile();
     void returnButtonPressed();
-    void on_tabWidget_tabBarClicked(int index);
 
 //    void updateMenus();
 //    void updateWindowMenus();
     MdiChildWindow* createMdiChild();
+
+    void on_CamMechanismType_clicked();
+    void on_menuTabWidget_tabBarClicked(int index);
 
 private:
     Ui::MainWindow *ui;
@@ -91,6 +93,8 @@ private:
 //    QAction *nextAct;
 //    QAction *previousAct;
 //    QAction *windowMenuSeparatorAct;
+
+    QWidget* CamMechanismTypeWidget;
 
    //********DATA***************
 
