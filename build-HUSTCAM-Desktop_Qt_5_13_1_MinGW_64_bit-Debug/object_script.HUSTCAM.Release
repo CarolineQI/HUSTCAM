@@ -1,0 +1,15 @@
+release/cmtwidget.o
+release/diagramitem.o
+release/diagramscene.o
+release/jlitem.o
+release/main.o
+release/mainwindow.o
+release/mdichildwindow.o
+release/planecamitem.o
+release/planecdjitem.o
+release/planeitem.o
+release/qrc_resource.o
+release/moc_cmtwidget.o
+release/moc_diagramscene.o
+release/moc_jlitem.o
+release/moc_mainwindow.o

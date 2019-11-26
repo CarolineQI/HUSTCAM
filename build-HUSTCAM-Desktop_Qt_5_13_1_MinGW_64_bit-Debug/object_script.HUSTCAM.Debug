@@ -1,0 +1,15 @@
+debug/cmtwidget.o
+debug/diagramitem.o
+debug/diagramscene.o
+debug/jlitem.o
+debug/main.o
+debug/mainwindow.o
+debug/mdichildwindow.o
+debug/planecamitem.o
+debug/planecdjitem.o
+debug/planeitem.o
+debug/qrc_resource.o
+debug/moc_cmtwidget.o
+debug/moc_diagramscene.o
+debug/moc_jlitem.o
+debug/moc_mainwindow.o
