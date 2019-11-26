@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/cam">
+        <file>resource/HUST.png</file>
+        <file>resource/design/FollowerMotionLaw.png</file>
+        <file>resource/design/GeometricParameters.png</file>
+        <file>resource/design/CamMechanismType.png</file>
+        <file>resource/file/return.png</file>
+        <file>resource/file/startcurrent.png</file>
+        <file>resource/file/startpressed.png</file>
+        <file>resource/start/build.png</file>
+        <file>resource/start/open.png</file>
+        <file>resource/start/save.png</file>
+        <file>resource/start/saveAs.png</file>
+        <file>resource/file/newfile.png</file>
+        <file>resource/file/openfile.png</file>
+        <file>resource/file/saveas.png</file>
+        <file>resource/file/savefile.png</file>
+        <file>resource/file/start.png</file>
+        <file>resource/figure/curveFigure/COS.png</file>
+        <file>resource/figure/curveFigure/CY.png</file>
+        <file>resource/figure/curveFigure/MCV.png</file>
+        <file>resource/figure/curveFigure/MS.png</file>
+        <file>resource/figure/curveFigure/MT.png</file>
+        <file>resource/figure/curveFigure/PB.png</file>
+    </qresource>
+</RCC>
