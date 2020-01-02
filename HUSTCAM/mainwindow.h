@@ -23,7 +23,7 @@
 #include"diagramitem.h"
 #include"mdichildwindow.h"
 #include"cmtwidget.h"
-
+#include"fmlwidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -49,7 +49,9 @@ private slots:
 
 
 
-    void on_CamMechanismType_clicked();
+    void on_CamMechanismType_clicked(); 
+    void on_FollowerMotionLaw_clicked();
+
     void on_menuTabWidget_tabBarClicked(int index);
 
     void getCamMechData(int camMechType);
@@ -58,6 +60,7 @@ private slots:
 
 
     //data
+
 
 private:
     Ui::MainWindow *ui;
@@ -85,7 +88,8 @@ private:
 
     QMenu* itemMenu;
 
-    CMTWidget* CamMechanismTypeWidget;//凸轮机构类型窗口
+    CMTWidget* m_CMTWidget;//凸轮机构类型窗口
+    FMLWidget* m_FMLWidget;//从动件运动规律窗口
 
    //********DATA***************
 public:

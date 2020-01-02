@@ -1,5 +1,6 @@
 QT       += core gui
 QT       += sql widgets
+QT       += charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -19,28 +20,35 @@ SOURCES += \
     cmtwidget.cpp \
     diagramitem.cpp \
     diagramscene.cpp \
+    fmlwidget.cpp \
+    followmotionlaw.cpp \
     jlitem.cpp \
     main.cpp \
     mainwindow.cpp \
     mdichildwindow.cpp \
     planecamitem.cpp \
     planecdjitem.cpp \
-    planeitem.cpp
+    planeitem.cpp \
+    rcurve.cpp
 
 HEADERS += \
     cmtwidget.h \
     database.h \
     diagramitem.h \
     diagramscene.h \
+    fmlwidget.h \
+    followmotionlaw.h \
     jlitem.h \
     mainwindow.h \
     mdichildwindow.h \
     planecamitem.h \
     planecdjitem.h \
-    planeitem.h
+    planeitem.h \
+    rcurve.h
 
 FORMS += \
     cmtwidget.ui \
+    fmlwidget.ui \
     mainwindow.ui
 
 # Default rules for deployment.
@@ -50,3 +58,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+INCLUDEPATH +=eigen-3.3.7\eigen-3.3.7
+

@@ -12,9 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentIndex(1);
     ui->menuTabWidget->setCurrentWidget(ui->Begin);
 
-    CamMechanismTypeWidget=new CMTWidget;
+    m_CMTWidget=new CMTWidget;
+    m_FMLWidget=new FMLWidget;
     connect(ui->buildButton,&QPushButton::clicked,this,&MainWindow::newFile);
-    connect(CamMechanismTypeWidget,SIGNAL(sendCamMechData(int)),this,SLOT(getCamMechData(int)));
+    connect(m_CMTWidget,SIGNAL(sendCamMechData(int)),this,SLOT(getCamMechData(int)));
 
 }
 
@@ -106,9 +107,14 @@ void MainWindow::setCurrentIndex()
 
 void MainWindow::on_CamMechanismType_clicked()
 {
-    CamMechanismTypeWidget->show();
+    m_CMTWidget->show();
 //    m_camMechType=CamMechanismTypeWidget->getCamMechType();
 
+}
+
+void MainWindow::on_FollowerMotionLaw_clicked()
+{
+    m_FMLWidget->show();
 }
 
 void MainWindow::on_menuTabWidget_tabBarClicked(int index)
@@ -126,3 +132,4 @@ void MainWindow::getCamMechData(int camMechType)
     m_camMechType=camMechType;
     qDebug()<<"选择的凸轮机构类型为："<<m_camMechType;
 }
+
