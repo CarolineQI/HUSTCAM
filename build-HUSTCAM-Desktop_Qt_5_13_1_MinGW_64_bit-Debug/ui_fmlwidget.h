@@ -160,6 +160,20 @@ public:
     QWidget *VCurveView;
     QWidget *ACurveView;
     QWidget *JCurveView;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *VM;
+    QLabel *label;
+    QLabel *VmText;
+    QHBoxLayout *AM;
+    QLabel *label_5;
+    QLabel *AmText;
+    QHBoxLayout *JM;
+    QLabel *label_7;
+    QLabel *JmText;
+    QHBoxLayout *QM;
+    QLabel *label_8;
+    QLabel *QmText;
 
     void setupUi(QWidget *FMLWidget)
     {
@@ -673,11 +687,11 @@ public:
         ProDesignToolBox->setFrameShadow(QFrame::Sunken);
         ProUp = new QWidget();
         ProUp->setObjectName(QString::fromUtf8("ProUp"));
-        ProUp->setGeometry(QRect(0, 0, 670, 565));
+        ProUp->setGeometry(QRect(0, 0, 100, 30));
         ProDesignToolBox->addItem(ProUp, QString::fromUtf8("Page 1"));
         ProReturn = new QWidget();
         ProReturn->setObjectName(QString::fromUtf8("ProReturn"));
-        ProReturn->setGeometry(QRect(0, 0, 670, 565));
+        ProReturn->setGeometry(QRect(0, 0, 65, 16));
         ProDesignToolBox->addItem(ProReturn, QString::fromUtf8("Page 2"));
 
         verticalLayout_10->addWidget(ProDesignToolBox);
@@ -759,11 +773,11 @@ public:
         ProDesignToolBox_2->setFrameShadow(QFrame::Sunken);
         ProUp_2 = new QWidget();
         ProUp_2->setObjectName(QString::fromUtf8("ProUp_2"));
-        ProUp_2->setGeometry(QRect(0, 0, 670, 565));
+        ProUp_2->setGeometry(QRect(0, 0, 100, 30));
         ProDesignToolBox_2->addItem(ProUp_2, QString::fromUtf8("Page 1"));
         ProReturn_2 = new QWidget();
         ProReturn_2->setObjectName(QString::fromUtf8("ProReturn_2"));
-        ProReturn_2->setGeometry(QRect(0, 0, 670, 565));
+        ProReturn_2->setGeometry(QRect(0, 0, 65, 16));
         ProDesignToolBox_2->addItem(ProReturn_2, QString::fromUtf8("Page 2"));
 
         verticalLayout_13->addWidget(ProDesignToolBox_2);
@@ -813,9 +827,7 @@ public:
         DesignView->setSizePolicy(sizePolicy1);
         DesignView->setStyleSheet(QString::fromUtf8("background-color: rgb(100, 100, 100);"));
         verticalLayout = new QVBoxLayout(DesignView);
-        verticalLayout->setSpacing(0);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         SCurveView = new QWidget(DesignView);
         SCurveView->setObjectName(QString::fromUtf8("SCurveView"));
         sizePolicy.setHeightForWidth(SCurveView->sizePolicy().hasHeightForWidth());
@@ -847,6 +859,111 @@ public:
         JCurveView->setMinimumSize(QSize(500, 200));
 
         verticalLayout->addWidget(JCurveView);
+
+        widget = new QWidget(DesignView);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy3);
+        widget->setMinimumSize(QSize(0, 0));
+        widget->setStyleSheet(QString::fromUtf8(""));
+        horizontalLayout_3 = new QHBoxLayout(widget);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        VM = new QHBoxLayout();
+        VM->setSpacing(0);
+        VM->setObjectName(QString::fromUtf8("VM"));
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        VM->addWidget(label);
+
+        VmText = new QLabel(widget);
+        VmText->setObjectName(QString::fromUtf8("VmText"));
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(VmText->sizePolicy().hasHeightForWidth());
+        VmText->setSizePolicy(sizePolicy4);
+        VmText->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        VM->addWidget(VmText);
+
+
+        horizontalLayout_3->addLayout(VM);
+
+        AM = new QHBoxLayout();
+        AM->setSpacing(0);
+        AM->setObjectName(QString::fromUtf8("AM"));
+        label_5 = new QLabel(widget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        AM->addWidget(label_5);
+
+        AmText = new QLabel(widget);
+        AmText->setObjectName(QString::fromUtf8("AmText"));
+        sizePolicy4.setHeightForWidth(AmText->sizePolicy().hasHeightForWidth());
+        AmText->setSizePolicy(sizePolicy4);
+        AmText->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        AM->addWidget(AmText);
+
+
+        horizontalLayout_3->addLayout(AM);
+
+        JM = new QHBoxLayout();
+        JM->setSpacing(0);
+        JM->setObjectName(QString::fromUtf8("JM"));
+        label_7 = new QLabel(widget);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        JM->addWidget(label_7);
+
+        JmText = new QLabel(widget);
+        JmText->setObjectName(QString::fromUtf8("JmText"));
+        sizePolicy4.setHeightForWidth(JmText->sizePolicy().hasHeightForWidth());
+        JmText->setSizePolicy(sizePolicy4);
+        JmText->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        JM->addWidget(JmText);
+
+
+        horizontalLayout_3->addLayout(JM);
+
+        QM = new QHBoxLayout();
+        QM->setSpacing(0);
+        QM->setObjectName(QString::fromUtf8("QM"));
+        label_8 = new QLabel(widget);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        QM->addWidget(label_8);
+
+        QmText = new QLabel(widget);
+        QmText->setObjectName(QString::fromUtf8("QmText"));
+        sizePolicy4.setHeightForWidth(QmText->sizePolicy().hasHeightForWidth());
+        QmText->setSizePolicy(sizePolicy4);
+        QmText->setStyleSheet(QString::fromUtf8("font: 12pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"color: rgb(255, 255, 255);"));
+
+        QM->addWidget(QmText);
+
+
+        horizontalLayout_3->addLayout(QM);
+
+
+        verticalLayout->addWidget(widget);
 
         splitter->addWidget(DesignView);
 
@@ -888,6 +1005,14 @@ public:
         ProDesignToolBox_2->setItemText(ProDesignToolBox_2->indexOf(ProReturn_2), QCoreApplication::translate("FMLWidget", "Page 2", nullptr));
         REDeReButton->setText(QCoreApplication::translate("FMLWidget", "\350\277\224\345\233\236", nullptr));
         ReDeSureButton->setText(QCoreApplication::translate("FMLWidget", "\345\256\214\346\210\220", nullptr));
+        label->setText(QCoreApplication::translate("FMLWidget", "Vm\357\274\232", nullptr));
+        VmText->setText(QCoreApplication::translate("FMLWidget", "0", nullptr));
+        label_5->setText(QCoreApplication::translate("FMLWidget", "Am\357\274\232", nullptr));
+        AmText->setText(QCoreApplication::translate("FMLWidget", "0", nullptr));
+        label_7->setText(QCoreApplication::translate("FMLWidget", "Jm\357\274\232", nullptr));
+        JmText->setText(QCoreApplication::translate("FMLWidget", "0", nullptr));
+        label_8->setText(QCoreApplication::translate("FMLWidget", "Qm\357\274\232", nullptr));
+        QmText->setText(QCoreApplication::translate("FMLWidget", "0", nullptr));
     } // retranslateUi
 
 };

@@ -12,13 +12,17 @@ class RCurve
 {
 public:
     RCurve(QVector<double> T,QVector<int> F);
+    RCurve(QList<QPointF>Spoints,QList<QPointF>Vpoints,QList<QPointF>Apoints,QList<QPointF>Jpoints);
     ~RCurve()=default;
 
-    double ar;
-    double dr;
-    double am;
-    double dm;
-    double vm;
+    double m_Aar=0;
+    double m_Adr=0;
+    double m_Aam=0;
+    double m_Adm=0;
+    double m_Vm=0;
+    double m_JmMin=0;
+    double m_JmMax=0;
+    double m_Qm=0;
 
     QList<QPointF> m_SCurve;//无量纲位移曲线离散点
     QList<QPointF> m_VCurve;//无量纲速度曲线离散点
@@ -93,6 +97,8 @@ private:
     void GetAm();
     void GetRCurve();//无量纲通用曲线
 
+public slots:
+    void update();
 
 };
 

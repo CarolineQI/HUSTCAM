@@ -59,5 +59,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     resource.qrc
 
-INCLUDEPATH +=eigen-3.3.7\eigen-3.3.7
+INCLUDEPATH +=E:\GraduateProgram\HUSTCAM\HUSTCAM\eigen-3.3.7
 

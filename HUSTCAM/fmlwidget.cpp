@@ -11,16 +11,18 @@ FMLWidget::FMLWidget(QWidget *parent) :
         listpoints<<QPointF(i,10.0*sin(double(i)*0.2*M_PI));
     }
 
-    ui->DRDView->setLayout(createCurveWidget(&listpoints,"DRD曲线"));
-    ui->RDRView->setLayout(createCurveWidget(&listpoints,"RDR曲线"));
-    ui->RRDView->setLayout(createCurveWidget(&listpoints,"RRD曲线"));
-    ui->RRRView->setLayout(createCurveWidget(&listpoints,"RRR曲线"));
+    ui->DRDView->setLayout(createCurveWidget(&listpoints,"DRD曲线",-10,10));
+    ui->RDRView->setLayout(createCurveWidget(&listpoints,"RDR曲线",-10,10));
+    ui->RRDView->setLayout(createCurveWidget(&listpoints,"RRD曲线",-10,10));
+    ui->RRRView->setLayout(createCurveWidget(&listpoints,"RRR曲线",-10,10));
 
-    m_SCurveSeries=&listpoints;
-    m_VCurveSeries=&listpoints;
-    m_ACurveSeries=&listpoints;
-    m_JCurveSeries=&listpoints;
+    m_FMLPoints=new FollowMotionLaw();
+    m_SCurveSeries=&m_FMLPoints->m_SPoints;
+    m_VCurveSeries=&m_FMLPoints->m_VPoints;
+    m_ACurveSeries=&m_FMLPoints->m_APoints;
+    m_JCurveSeries=&m_FMLPoints->m_JPoints;
     updateCurve();
+
 
 
 }
@@ -30,11 +32,11 @@ FMLWidget::~FMLWidget()
     delete ui;
 }
 
-QGridLayout* FMLWidget::createCurveWidget(QList<QPointF>* points,QString chartTitle)
+QGridLayout* FMLWidget::createCurveWidget(QList<QPointF>* points,QString chartTitle,double min,double max)
 {
     //![1]
-    QSplineSeries *series = new QSplineSeries();
-    series->setName("spline");
+    QLineSeries *series = new QSplineSeries();
+    series->setName("line");
     //![1]
 
     //![2]
@@ -48,7 +50,7 @@ QGridLayout* FMLWidget::createCurveWidget(QList<QPointF>* points,QString chartTi
     chart->addSeries(series);
     chart->setTitle(chartTitle);
     chart->createDefaultAxes();
-    chart->axes(Qt::Vertical).first()->setRange(-10.05, 10.05);
+    chart->axes(Qt::Vertical).first()->setRange(min, max);
     //![3]
 
     //![4]
@@ -69,10 +71,15 @@ QGridLayout* FMLWidget::createCurveWidget(QList<QPointF>* points,QString chartTi
 
 void FMLWidget::updateCurve()
 {
-    ui->SCurveView->setLayout(createCurveWidget(m_SCurveSeries,"位移曲线"));
-    ui->VCurveView->setLayout(createCurveWidget(m_VCurveSeries,"速度曲线"));
-    ui->ACurveView->setLayout(createCurveWidget(m_ACurveSeries,"加速度曲线"));
-    ui->JCurveView->setLayout(createCurveWidget(m_JCurveSeries,"跃度曲线"));
+    ui->SCurveView->setLayout(createCurveWidget(m_SCurveSeries,"位移曲线",0,m_FMLPoints->m_h*1.1));
+    ui->VCurveView->setLayout(createCurveWidget(m_VCurveSeries,"速度曲线",m_FMLPoints->m_VmMin*1.1,m_FMLPoints->m_VmMax*1.1));
+    ui->ACurveView->setLayout(createCurveWidget(m_ACurveSeries,"加速度曲线",m_FMLPoints->m_AmMin*1.1,m_FMLPoints->m_AmMax*1.1));
+    ui->JCurveView->setLayout(createCurveWidget(m_JCurveSeries,"跃度曲线",m_FMLPoints->m_JmMin*1.1,m_FMLPoints->m_JmMax*1.1));
+
+    ui->VmText->setNum(m_FMLPoints->m_VmMax);
+    ui->AmText->setNum(m_FMLPoints->m_AmMax);
+    ui->JmText->setNum(m_FMLPoints->m_JmMax);
+    ui->QmText->setNum(m_FMLPoints->m_Qm);
 }
 
 

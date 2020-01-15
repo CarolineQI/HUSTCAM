@@ -3,6 +3,7 @@
 
 #include <QtCharts/QChartView>
 #include <QtCharts/QSplineSeries>
+#include <QtCharts/QLineSeries>
 #include <QGridLayout>
 #include <QWidget>
 #include "math.h"
@@ -38,8 +39,9 @@ private:
     QList<QPointF> *m_VCurveSeries;
     QList<QPointF> *m_ACurveSeries;
     QList<QPointF> *m_JCurveSeries;
-    QGridLayout* createCurveWidget(QList<QPointF>* points,QString chartTitle);
+    QGridLayout* createCurveWidget(QList<QPointF>* points,QString chartTitle,double min,double max);
 
+    FollowMotionLaw* m_FMLPoints;
     void updateCurve();
 };
 
