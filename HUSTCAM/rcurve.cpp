@@ -614,7 +614,7 @@ double RCurve::j2( double t)
 double RCurve::j3( double t)
 {
     Q_UNUSED(t)
-    return m_Aam;
+    return 0.0;
 }
 
 double RCurve::j4( double t)

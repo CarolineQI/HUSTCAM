@@ -50,7 +50,7 @@ QGridLayout* FMLWidget::createCurveWidget(QList<QPointF>* points,QString chartTi
     chart->addSeries(series);
     chart->setTitle(chartTitle);
     chart->createDefaultAxes();
-    chart->axes(Qt::Vertical).first()->setRange(min, max);
+//    chart->axes(Qt::Vertical).first()->setRange(min, max);
     //![3]
 
     //![4]

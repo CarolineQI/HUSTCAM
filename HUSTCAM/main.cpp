@@ -1,17 +1,19 @@
 #include "mainwindow.h"
 #include "database.h"
 #include <QApplication>
-
-//#include <Eigen/Geometry>
+#include <Eigen/Eigen>
+#include <Eigen/Dense>
+#include <Eigen/Geometry>
 #include <iostream>
 using namespace std;
-//using namespace Eigen;
+using namespace Eigen;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     if (!createConnection())
         return EXIT_FAILURE;
+
 
 //    Matrix3d m1 = Matrix3d::Random();
 //    cout << m1 << endl;

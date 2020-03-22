@@ -16,7 +16,7 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_CHARTS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -W -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -W -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\HUSTCAM -I. -I..\HUSTCAM\eigen-3.3.7 -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtCharts -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtWidgets -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtGui -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtANGLE -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtSql -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtCore -Idebug -I. -I/include -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\HUSTCAM -I. -I..\HUSTCAM\eigen3 -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtCharts -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtWidgets -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtGui -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtANGLE -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtSql -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\include\QtCore -Idebug -I. -I/include -ID:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
 LIBS        =        D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libQt5Chartsd.a D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libQt5Widgetsd.a D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libQt5Guid.a D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libQt5Sqld.a D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libQt5Cored.a  -lmingw32 D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\libqtmaind.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
@@ -129,7 +129,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) HUSTCAM.zip $(SOURCES) $(DIST) ..\HUSTCAM\HUSTCAM.pro D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\spec_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\qdevice.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\device_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\sanitize.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\gcc-base.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\g++-base.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\angle.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\windows-vulkan.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\g++-win32.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\windows-desktop.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\qconfig.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_charts.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_charts_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt_functions.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\win32-g++\qmake.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exclusive_builds.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\toolchain.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\default_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\default_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\resolve_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exclusive_builds_post.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\default_post.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\build_pass.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qml_debug.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\precompile_header.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\warn_on.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\resources.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\moc.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\opengl.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\uic.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qmake_use.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\file_copies.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\windows.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\testcase_targets.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exceptions.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\yacc.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\lex.prf ..\HUSTCAM\HUSTCAM.pro ..\HUSTCAM\resource.qrc D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Chartsd.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Widgetsd.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Guid.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Sqld.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Cored.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\qtmaind.prl   ..\HUSTCAM\resource.qrc D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\data\dummy.cpp ..\HUSTCAM\cmtwidget.h ..\HUSTCAM\database.h ..\HUSTCAM\diagramitem.h ..\HUSTCAM\diagramscene.h ..\HUSTCAM\fmlwidget.h ..\HUSTCAM\followmotionlaw.h ..\HUSTCAM\jlitem.h ..\HUSTCAM\mainwindow.h ..\HUSTCAM\mdichildwindow.h ..\HUSTCAM\planecamitem.h ..\HUSTCAM\planecdjitem.h ..\HUSTCAM\planeitem.h ..\HUSTCAM\rcurve.h  ..\HUSTCAM\cmtwidget.cpp ..\HUSTCAM\diagramitem.cpp ..\HUSTCAM\diagramscene.cpp ..\HUSTCAM\fmlwidget.cpp ..\HUSTCAM\followmotionlaw.cpp ..\HUSTCAM\jlitem.cpp ..\HUSTCAM\main.cpp ..\HUSTCAM\mainwindow.cpp ..\HUSTCAM\mdichildwindow.cpp ..\HUSTCAM\planecamitem.cpp ..\HUSTCAM\planecdjitem.cpp ..\HUSTCAM\planeitem.cpp ..\HUSTCAM\rcurve.cpp ..\HUSTCAM\cmtwidget.ui ..\HUSTCAM\fmlwidget.ui ..\HUSTCAM\mainwindow.ui    
+	$(ZIP) HUSTCAM.zip $(SOURCES) $(DIST) ..\HUSTCAM\HUSTCAM.pro D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\spec_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\qdevice.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\device_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\sanitize.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\gcc-base.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\g++-base.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\angle.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\windows-vulkan.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\g++-win32.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\common\windows-desktop.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\qconfig.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bodymovin_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_charts.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_charts_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_purchasing.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_purchasing_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_script.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_script_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scripttools.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scripttools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt_functions.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\win32-g++\qmake.conf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exclusive_builds.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\toolchain.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\default_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\default_pre.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\resolve_config.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exclusive_builds_post.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\default_post.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\build_pass.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qml_debug.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\precompile_header.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\warn_on.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qt.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\resources.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\moc.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\opengl.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\uic.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\qmake_use.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\file_copies.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\win32\windows.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\testcase_targets.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\exceptions.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\yacc.prf D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\lex.prf ..\HUSTCAM\HUSTCAM.pro ..\HUSTCAM\resource.qrc D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Chartsd.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Widgetsd.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Guid.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Sqld.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\Qt5Cored.prl D:\Qt\Qt5.13.1\5.13.1\mingw73_64\lib\qtmaind.prl   ..\HUSTCAM\resource.qrc D:\Qt\Qt5.13.1\5.13.1\mingw73_64\mkspecs\features\data\dummy.cpp ..\HUSTCAM\cmtwidget.h ..\HUSTCAM\database.h ..\HUSTCAM\diagramitem.h ..\HUSTCAM\diagramscene.h ..\HUSTCAM\fmlwidget.h ..\HUSTCAM\followmotionlaw.h ..\HUSTCAM\jlitem.h ..\HUSTCAM\mainwindow.h ..\HUSTCAM\mdichildwindow.h ..\HUSTCAM\planecamitem.h ..\HUSTCAM\planecdjitem.h ..\HUSTCAM\planeitem.h ..\HUSTCAM\rcurve.h  ..\HUSTCAM\cmtwidget.cpp ..\HUSTCAM\diagramitem.cpp ..\HUSTCAM\diagramscene.cpp ..\HUSTCAM\fmlwidget.cpp ..\HUSTCAM\followmotionlaw.cpp ..\HUSTCAM\jlitem.cpp ..\HUSTCAM\main.cpp ..\HUSTCAM\mainwindow.cpp ..\HUSTCAM\mdichildwindow.cpp ..\HUSTCAM\planecamitem.cpp ..\HUSTCAM\planecdjitem.cpp ..\HUSTCAM\planeitem.cpp ..\HUSTCAM\rcurve.cpp ..\HUSTCAM\cmtwidget.ui ..\HUSTCAM\fmlwidget.ui ..\HUSTCAM\mainwindow.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug\cmtwidget.o debug\diagramitem.o debug\diagramscene.o debug\fmlwidget.o debug\followmotionlaw.o debug\jlitem.o debug\main.o debug\mainwindow.o debug\mdichildwindow.o debug\planecamitem.o debug\planecdjitem.o debug\planeitem.o debug\rcurve.o debug\qrc_resource.o debug\moc_cmtwidget.o debug\moc_diagramscene.o debug\moc_fmlwidget.o debug\moc_jlitem.o debug\moc_mainwindow.o
@@ -310,7 +310,7 @@ debug/moc_cmtwidget.cpp: ../HUSTCAM/cmtwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql/qsqlrecord.h \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
-	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include E:/GraduateProgram/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IE:/GraduateProgram/HUSTCAM/HUSTCAM -IE:/GraduateProgram/HUSTCAM/HUSTCAM/eigen-3.3.7 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\cmtwidget.h -o debug\moc_cmtwidget.cpp
+	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Administrator/Desktop/GP/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM/eigen3 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\cmtwidget.h -o debug\moc_cmtwidget.cpp
 
 debug/moc_diagramscene.cpp: ../HUSTCAM/diagramscene.h \
 		../HUSTCAM/diagramitem.h \
@@ -432,7 +432,7 @@ debug/moc_diagramscene.cpp: ../HUSTCAM/diagramscene.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
-	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include E:/GraduateProgram/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IE:/GraduateProgram/HUSTCAM/HUSTCAM -IE:/GraduateProgram/HUSTCAM/HUSTCAM/eigen-3.3.7 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\diagramscene.h -o debug\moc_diagramscene.cpp
+	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Administrator/Desktop/GP/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM/eigen3 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\diagramscene.h -o debug\moc_diagramscene.cpp
 
 debug/moc_fmlwidget.cpp: ../HUSTCAM/fmlwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QChartView \
@@ -576,6 +576,7 @@ debug/moc_fmlwidget.cpp: ../HUSTCAM/fmlwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/qxyseries.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QPointF \
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QLineSeries \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QGridLayout \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qgridlayout.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlayout.h \
@@ -588,7 +589,7 @@ debug/moc_fmlwidget.cpp: ../HUSTCAM/fmlwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QVector \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
-	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include E:/GraduateProgram/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IE:/GraduateProgram/HUSTCAM/HUSTCAM -IE:/GraduateProgram/HUSTCAM/HUSTCAM/eigen-3.3.7 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\fmlwidget.h -o debug\moc_fmlwidget.cpp
+	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Administrator/Desktop/GP/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM/eigen3 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\fmlwidget.h -o debug\moc_fmlwidget.cpp
 
 debug/moc_jlitem.cpp: ../HUSTCAM/jlitem.h \
 		../HUSTCAM/planeitem.h \
@@ -694,7 +695,7 @@ debug/moc_jlitem.cpp: ../HUSTCAM/jlitem.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qmath.h \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
-	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include E:/GraduateProgram/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IE:/GraduateProgram/HUSTCAM/HUSTCAM -IE:/GraduateProgram/HUSTCAM/HUSTCAM/eigen-3.3.7 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\jlitem.h -o debug\moc_jlitem.cpp
+	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Administrator/Desktop/GP/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM/eigen3 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\jlitem.h -o debug\moc_jlitem.cpp
 
 debug/moc_mainwindow.cpp: ../HUSTCAM/mainwindow.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QMainWindow \
@@ -931,13 +932,14 @@ debug/moc_mainwindow.cpp: ../HUSTCAM/mainwindow.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/qxyseries.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QPointF \
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QLineSeries \
 		../HUSTCAM/followmotionlaw.h \
 		../HUSTCAM/rcurve.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QVector \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
-	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include E:/GraduateProgram/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IE:/GraduateProgram/HUSTCAM/HUSTCAM -IE:/GraduateProgram/HUSTCAM/HUSTCAM/eigen-3.3.7 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\mainwindow.h -o debug\moc_mainwindow.cpp
+	D:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/Administrator/Desktop/GP/HUSTCAM/build-HUSTCAM-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM -IC:/Users/Administrator/Desktop/GP/HUSTCAM/HUSTCAM/eigen3 -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -ID:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\HUSTCAM\mainwindow.h -o debug\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1508,6 +1510,7 @@ debug/fmlwidget.o: ../HUSTCAM/fmlwidget.cpp ../HUSTCAM/fmlwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/qxyseries.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QPointF \
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QLineSeries \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QGridLayout \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qgridlayout.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlayout.h \
@@ -1946,6 +1949,7 @@ debug/main.o: ../HUSTCAM/main.cpp ../HUSTCAM/mainwindow.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/qxyseries.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QPointF \
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QLineSeries \
 		../HUSTCAM/followmotionlaw.h \
 		../HUSTCAM/rcurve.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QList \
@@ -1962,7 +1966,284 @@ debug/main.o: ../HUSTCAM/main.cpp ../HUSTCAM/mainwindow.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qinputmethod.h
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../HUSTCAM/eigen3/Eigen/Eigen \
+		../HUSTCAM/eigen3/Eigen/Dense \
+		../HUSTCAM/eigen3/Eigen/Core \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/Macros.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/MKL_support.h \
+		../HUSTCAM/eigen3/Eigen/src/misc/blas.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/Constants.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/Meta.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/StaticAssert.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/XprHelper.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/Memory.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/NumTraits.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/GenericPacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX512/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX512/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/ZVector/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/ZVector/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/ZVector/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/Half.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/TypeCasting.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/PacketMath.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/MathFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/arch/CUDA/Complex.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/IO.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/DenseBase.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/BlockMethods.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/MatrixBase.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/EigenBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Product.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CoreEvaluators.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/AssignEvaluator.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Assign.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/ArrayBase.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/BlasUtil.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/DenseStorage.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/NestByValue.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/ReturnByValue.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/NoAlias.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/PlainObjectBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Matrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Array.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Dot.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/StableNorm.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Stride.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/MapBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Map.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Ref.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Block.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/VectorBlock.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Transpose.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Diagonal.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/DiagonalProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Redux.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Visitor.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Fuzzy.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Swap.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CommaInitializer.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/GeneralProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Solve.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Inverse.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/SolverBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/PermutationMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Transpositions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/TriangularMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/SelfAdjointView.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/Parallelizer.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/ProductEvaluators.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/SolveTriangular.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/BandMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/CoreIterators.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/ConditionEstimator.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/BooleanRedux.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Select.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/VectorwiseOp.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Random.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Replicate.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Reverse.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/ArrayWrapper.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/Assign_MKL.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/GlobalFunctions.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+		../HUSTCAM/eigen3/Eigen/LU \
+		../HUSTCAM/eigen3/Eigen/src/misc/Kernel.h \
+		../HUSTCAM/eigen3/Eigen/src/misc/Image.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/FullPivLU.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/PartialPivLU.h \
+		../HUSTCAM/eigen3/Eigen/src/misc/lapacke.h \
+		../HUSTCAM/eigen3/Eigen/src/misc/lapacke_mangling.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/PartialPivLU_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/Determinant.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/InverseImpl.h \
+		../HUSTCAM/eigen3/Eigen/src/LU/arch/Inverse_SSE.h \
+		../HUSTCAM/eigen3/Eigen/Cholesky \
+		../HUSTCAM/eigen3/Eigen/Jacobi \
+		../HUSTCAM/eigen3/Eigen/src/Jacobi/Jacobi.h \
+		../HUSTCAM/eigen3/Eigen/src/Cholesky/LLT.h \
+		../HUSTCAM/eigen3/Eigen/src/Cholesky/LDLT.h \
+		../HUSTCAM/eigen3/Eigen/src/Cholesky/LLT_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/QR \
+		../HUSTCAM/eigen3/Eigen/Householder \
+		../HUSTCAM/eigen3/Eigen/src/Householder/Householder.h \
+		../HUSTCAM/eigen3/Eigen/src/Householder/HouseholderSequence.h \
+		../HUSTCAM/eigen3/Eigen/src/Householder/BlockHouseholder.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/HouseholderQR.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/HouseholderQR_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/SVD \
+		../HUSTCAM/eigen3/Eigen/src/misc/RealSvd2x2.h \
+		../HUSTCAM/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
+		../HUSTCAM/eigen3/Eigen/src/SVD/SVDBase.h \
+		../HUSTCAM/eigen3/Eigen/src/SVD/JacobiSVD.h \
+		../HUSTCAM/eigen3/Eigen/src/SVD/BDCSVD.h \
+		../HUSTCAM/eigen3/Eigen/src/SVD/JacobiSVD_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/Geometry \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/OrthoMethods.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/EulerAngles.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Homogeneous.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/RotationBase.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Rotation2D.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Quaternion.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/AngleAxis.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Transform.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Translation.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Scaling.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Hyperplane.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/ParametrizedLine.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/AlignedBox.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/Umeyama.h \
+		../HUSTCAM/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h \
+		../HUSTCAM/eigen3/Eigen/Eigenvalues \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h \
+		../HUSTCAM/eigen3/Eigen/Sparse \
+		../HUSTCAM/eigen3/Eigen/SparseCore \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseMap.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseVector.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseRef.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseDot.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseView.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+		../HUSTCAM/eigen3/Eigen/OrderingMethods \
+		../HUSTCAM/eigen3/Eigen/src/OrderingMethods/Amd.h \
+		../HUSTCAM/eigen3/Eigen/src/Core/util/NonMPL2.h \
+		../HUSTCAM/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+		../HUSTCAM/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+		../HUSTCAM/eigen3/Eigen/SparseCholesky \
+		../HUSTCAM/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+		../HUSTCAM/eigen3/Eigen/SparseLU \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+		../HUSTCAM/eigen3/Eigen/src/SparseLU/SparseLU.h \
+		../HUSTCAM/eigen3/Eigen/SparseQR \
+		../HUSTCAM/eigen3/Eigen/src/SparseQR/SparseQR.h \
+		../HUSTCAM/eigen3/Eigen/IterativeLinearSolvers \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+		../HUSTCAM/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\HUSTCAM\main.cpp
 
 debug/mainwindow.o: ../HUSTCAM/mainwindow.cpp ../HUSTCAM/mainwindow.h \
@@ -2200,6 +2481,7 @@ debug/mainwindow.o: ../HUSTCAM/mainwindow.cpp ../HUSTCAM/mainwindow.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/qxyseries.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QList \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QPointF \
+		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCharts/QLineSeries \
 		../HUSTCAM/followmotionlaw.h \
 		../HUSTCAM/rcurve.h \
 		D:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QList \

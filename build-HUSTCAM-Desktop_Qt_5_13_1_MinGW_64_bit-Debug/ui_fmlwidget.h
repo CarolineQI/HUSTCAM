@@ -687,12 +687,12 @@ public:
         ProDesignToolBox->setFrameShadow(QFrame::Sunken);
         ProUp = new QWidget();
         ProUp->setObjectName(QString::fromUtf8("ProUp"));
-        ProUp->setGeometry(QRect(0, 0, 100, 30));
-        ProDesignToolBox->addItem(ProUp, QString::fromUtf8("Page 1"));
+        ProUp->setGeometry(QRect(0, 0, 659, 565));
+        ProDesignToolBox->addItem(ProUp, QString::fromUtf8("\345\215\207\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241"));
         ProReturn = new QWidget();
         ProReturn->setObjectName(QString::fromUtf8("ProReturn"));
-        ProReturn->setGeometry(QRect(0, 0, 65, 16));
-        ProDesignToolBox->addItem(ProReturn, QString::fromUtf8("Page 2"));
+        ProReturn->setGeometry(QRect(0, 0, 659, 565));
+        ProDesignToolBox->addItem(ProReturn, QString::fromUtf8("\345\233\236\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241"));
 
         verticalLayout_10->addWidget(ProDesignToolBox);
 
@@ -773,11 +773,11 @@ public:
         ProDesignToolBox_2->setFrameShadow(QFrame::Sunken);
         ProUp_2 = new QWidget();
         ProUp_2->setObjectName(QString::fromUtf8("ProUp_2"));
-        ProUp_2->setGeometry(QRect(0, 0, 100, 30));
+        ProUp_2->setGeometry(QRect(0, 0, 659, 565));
         ProDesignToolBox_2->addItem(ProUp_2, QString::fromUtf8("Page 1"));
         ProReturn_2 = new QWidget();
         ProReturn_2->setObjectName(QString::fromUtf8("ProReturn_2"));
-        ProReturn_2->setGeometry(QRect(0, 0, 65, 16));
+        ProReturn_2->setGeometry(QRect(0, 0, 659, 565));
         ProDesignToolBox_2->addItem(ProReturn_2, QString::fromUtf8("Page 2"));
 
         verticalLayout_13->addWidget(ProDesignToolBox_2);
@@ -972,8 +972,8 @@ public:
 
         retranslateUi(FMLWidget);
 
-        DesignWidegt->setCurrentIndex(1);
-        ProDesignToolBox->setCurrentIndex(1);
+        DesignWidegt->setCurrentIndex(2);
+        ProDesignToolBox->setCurrentIndex(0);
         ProDesignToolBox_2->setCurrentIndex(1);
 
 
@@ -996,8 +996,8 @@ public:
         YDGCReturnButton->setText(QCoreApplication::translate("FMLWidget", "\350\277\224\345\233\236", nullptr));
         YDGCNextButton->setText(QCoreApplication::translate("FMLWidget", "\344\270\213\344\270\200\346\255\245", nullptr));
         label_3->setText(QCoreApplication::translate("FMLWidget", "\345\212\250\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241", nullptr));
-        ProDesignToolBox->setItemText(ProDesignToolBox->indexOf(ProUp), QCoreApplication::translate("FMLWidget", "Page 1", nullptr));
-        ProDesignToolBox->setItemText(ProDesignToolBox->indexOf(ProReturn), QCoreApplication::translate("FMLWidget", "Page 2", nullptr));
+        ProDesignToolBox->setItemText(ProDesignToolBox->indexOf(ProUp), QCoreApplication::translate("FMLWidget", "\345\215\207\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241", nullptr));
+        ProDesignToolBox->setItemText(ProDesignToolBox->indexOf(ProReturn), QCoreApplication::translate("FMLWidget", "\345\233\236\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241", nullptr));
         ProDeReButton->setText(QCoreApplication::translate("FMLWidget", "\350\277\224\345\233\236", nullptr));
         ProDeSureButton->setText(QCoreApplication::translate("FMLWidget", "\345\256\214\346\210\220", nullptr));
         label_4->setText(QCoreApplication::translate("FMLWidget", "\345\212\250\347\250\213\346\233\262\347\272\277\350\256\276\350\256\241", nullptr));

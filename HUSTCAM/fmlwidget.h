@@ -1,4 +1,4 @@
-#ifndef FMLWIDGET_H
+ #ifndef FMLWIDGET_H
 #define FMLWIDGET_H
 
 #include <QtCharts/QChartView>

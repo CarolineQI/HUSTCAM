@@ -59,5 +59,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     resource.qrc
 
-INCLUDEPATH +=E:\GraduateProgram\HUSTCAM\HUSTCAM\eigen-3.3.7
+#出了问题就重构main函数
+INCLUDEPATH +=\
+    eigen3
 

@@ -74,7 +74,7 @@ CMTWidget::CMTWidget(QWidget *parent) :
     ui->pChoiceTableView->horizontalHeader()->setDefaultAlignment(Qt::AlignCenter);        //表头信息显示居中
     ui->pChoiceTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);  //设置表格属性只读，不能编辑
     ui->pChoiceTableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);  //设定表头列宽自动拉伸
-    ui->pChoiceTableView->horizontalHeader()->setSectionResizeMode(0,QHeaderView::Fixed);  //设定0表头列宽不可变
+//    ui->pChoiceTableView->horizontalHeader()->setSectionResizeMode(0,QHeaderView::Fixed);  //设定0表头列宽不可变
 
     ui->pChoiceTableView->setShowGrid(true);//背景网格线设置
     ui->pChoiceTableView->setGridStyle(Qt::SolidLine);    //网格背景画笔
